@@ -35,6 +35,7 @@ El proyecto está diseñado bajo la arquitectura MVC para separar la lógica de 
    Ingresa el valor únicamente en la casilla "Numero 1". Puedes dejar la casilla "Numero 2" vacía. Haz clic en el botón de la operación deseada y verás el resultado.
 
 ### Estructura
+'''
 calculadora-java/
 ├── src/
 │   └── main/
@@ -57,7 +58,7 @@ calculadora-java/
 │               └── calculadoraCientificaGUI.java
 ├── pom.xml
 └── README.md
-
+'''
 ## Autores
 
 Desarrollo colaborativo realizado por:
