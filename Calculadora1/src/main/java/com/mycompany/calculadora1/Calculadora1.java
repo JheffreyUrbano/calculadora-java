@@ -8,9 +8,21 @@ package com.mycompany.calculadora1;
  *
  * @author USER
  */
+
+import vista.calculadoraCientificaGUI;
+import Controlador.ControladorCalculadora;
+
+
 public class Calculadora1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // 1. Instanciamos la vista
+        calculadoraCientificaGUI vista = new calculadoraCientificaGUI();
+        
+        // 2. Instanciamos controlador
+        ControladorCalculadora controlador = new ControladorCalculadora(vista);
+        
+        // 3. Arrancamos el JFrame
+        controlador.iniciar(); //Hace visible el GUI
     }
 }
