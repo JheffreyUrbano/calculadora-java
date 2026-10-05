@@ -42,6 +42,29 @@ public class ControladorCalculadora implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //Eventos con gets de la vista
+        
+        try{
+            // captura falla de número sino es double
+            double num1 = Double.parseDouble(vista.getTxtNumero1().getText());
+            double num2 = 0; //
+            
+            // condicional para ver que operacion pide el usuario
+            if(e.getSource()==vista.getBtnRaizCuadrada()){
+                operacion = new RaizCuadrada();
+            } else if (e.getSource() == vista.getBtnRaizCubica()){
+                operacion = new RaizCubica();
+            } else if (e.getSource() == vista.getBtnLogaritmo()) {
+                operacion = new LogaritmoNatural();
+            }
+            
+            if(operacion != null){
+                double resultado = operacion.calcular(num1, num2); //ejecuta calcular de
+                                                                   //la clase hija definida
+                vista.getLblResultado().setText(""+resultado);
+                operacion = null; //reinicia para el siguiente action
+            }
+        }catch(NumberFormatException ex) {
+            JOptionPane.showMessageDialog(null, "Ingrese un número válido en la casilla 1");
+        }
     }
 }
