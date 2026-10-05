@@ -49,6 +49,10 @@ public class ControladorCalculadora implements ActionListener {
             // Si la operacion requiere 2 numeros
             if (e.getSource() == vista.getBtnSumar() || e.getSource() == vista.getBtnRestar() || 
                 e.getSource() == vista.getBtnMultiplicar() || e.getSource() == vista.getBtnDividir()) {
+                
+                //Captura del segundo número
+                num2 = Double.parseDouble(vista.getTxtNumero2().getText());
+                
                 if (e.getSource() == vista.getBtnSumar()) {
                     operacion = new Suma();
                 } else if (e.getSource() == vista.getBtnRestar()) {
