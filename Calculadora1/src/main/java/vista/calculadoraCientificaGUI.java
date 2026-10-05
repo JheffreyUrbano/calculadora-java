@@ -19,6 +19,19 @@ public class calculadoraCientificaGUI extends javax.swing.JFrame {
         initComponents();
     }
 
+    // Getters para que el controlador acceda a los botones y cajas de texto
+    public javax.swing.JButton getBtnSumar() { return sumar1; }
+    public javax.swing.JButton getBtnRestar() { return restar1; }
+    public javax.swing.JButton getBtnMultiplicar() { return multiplicar; }
+    public javax.swing.JButton getBtnDividir() { return dividir; }
+    public javax.swing.JButton getBtnRaizCuadrada() { return raizcuadrada1; }
+    public javax.swing.JButton getBtnRaizCubica() { return raizcubica; }
+    public javax.swing.JButton getBtnLogaritmo() { return logaritmonatural; }
+    
+    public javax.swing.JTextField getTxtNumero1() { return numero1; }
+    public javax.swing.JTextField getTxtNumero2() { return numero2; }
+    public javax.swing.JLabel getLblResultado() { return resultado; }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
