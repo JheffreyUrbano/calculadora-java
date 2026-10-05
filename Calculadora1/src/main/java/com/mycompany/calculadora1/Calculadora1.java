@@ -23,6 +23,6 @@ public class Calculadora1 {
         ControladorCalculadora controlador = new ControladorCalculadora(vista);
         
         // 3. Arrancamos el JFrame
-        controlador.iniciar();
+        controlador.iniciar(); //Hace visible el GUI
     }
 }
